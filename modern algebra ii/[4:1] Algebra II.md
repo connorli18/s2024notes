@@ -1,0 +1,91 @@
+# [4/1] Algebra II
+
+#### Radicals
+
+**Definition:** We say that $f \in F[x]$ is solvable in radical if $\exists\;F = B_0 \leq B_1 \leq \cdots \leq B_t$ where $B_i = B_{i-1} (\alpha_{i-1})^{n_i}$ where $(\alpha_{i-1})^{n_i} \in B_{i-1}$ such that $f$ splits in $B_t \implies F \leq E \leq B_t$ where $E$ is the splitting field of $f$.
+
+**Theorem:** Let $\text{char}\;F = 0$ and $f \in F[x]$ is solvable by radicals, then $\text{Gal}(E/F)$ is solvable. 
+
+**Proof:** Recall, without loss of generality, we may assume all $n_i$-th roots of $1$. We construct another tower of extensions
+$$
+F \leq R_1 \leq R_2 \leq \cdots \leq R_t
+$$
+such that $B_i \leq R_i$ and $B_t \leq R_t$. 
+
+1. Each $R_i$ is a splitting field over $F$
+2. $\text{Gal}(R_i/R_{i-1})$ are abelian for all $i$​
+
+---
+
+**Why is this enough?** If we define $G_i = \text{Gal}(R_i/R_{i-1})$. This means that
+$$
+G_0 \rhd G_1 \rhd \cdots \rhd G_t = \{\text{id}\}
+$$
+Since all $R_i$ are splitting fields over $F$, we know $G_{i-1}/G_i \cong \text{Gal}(R_i / R_{i-1})$. Since $G_{i-1}/G_i$ are abelian and $G_t = \{\text{id}\}$, $G_0 = \text{Gal}(R/F)$ is solvable. 
+$$
+F \leq \underbrace{E \leq R}_{\text{splitting fields over }F} \implies \text{Gal}(E/F) \cong \underbrace{\text{Gal}(R/F) / \text{Gal(R/E)}}_{\text{solvable}} \implies \underbrace{\text{Gal}(E/F) }_{\text{solvable}}
+$$
+
+---
+
+We construct $R_i$ by induction. Define $R_1 = B_1 = F(\alpha_0)$ such that $(\alpha_0)^{n_1} \in F$. Since $F$ has all roots of unity, $x^{n_1} - (\alpha_0)^{n_1}$ splits in $B_1$ where $x^{n_1} \in F[x] \implies$ $B_1$ is a splitting field of the above polynomial over $F$.
+
+Now, assume we constructed such $R_{i-1}$. Notice $B_i = B_{i-1}(\alpha_{i-1})$ such that $(\alpha_{i-1})^{n_i} \in B_{i-1} \leq R_{i-1}$. We thus know that $\widetilde{R_i} = R_{i-1}(\alpha_{i-1})$ is a splitting field of $x^{n_i} - (\alpha_{i-1})^{n_i}$ over $R_{i-1}$ where $(\alpha_{i-1})^{n_i} \in R_{i-1}$. 
+
+In order to obtain a polynomial in $F[x]$ with root $\alpha_i$, we can average $\widetilde{g_i}$ over the Galois group. Define $g_i$ as follows.
+$$
+g_i = \prod_{\sigma \in \text{Gal}(R_i/F)} \left(x^{n_i} - \sigma(\alpha_{i-1})^{n_i}\right)
+$$
+By construction, $\tau(g_i) = g_i$ for any $\tau \in \text{Gal}(R_{i-1}/F)$. 
+
+---
+
+**Lemma:** Under conditions above, $g_i \in F[x]$ or if $\alpha \in R_{i-1}$ such that $\tau(\alpha) = \alpha$ for all $\tau \in \text{Gal}(R_{i-1}/F) \implies \alpha \in F$. (It is important that $R_{i-1}$ is a splitting field).
+
+**Proof:** (fill in later)
+
+---
+
+Define $R_i \geq B_i$ as the splitting field of $g_i \in F[x]$. Now, we show that $\text{Gal}(R_i / R_{i-1})$ is abelian. 
+
+We can write $R_i = R_{i-1} (\alpha_{i-1}, \alpha_{i-1, 2}, \cdots \alpha_{i-1, k})$ where $(\alpha_{i-1,j})^{n_i} \in R_{i-1}$ are distinct elements. Construct the following homomorphism.
+$$
+\text{Gal}(R_i / R_{i-1}) \rightarrow \prod_{j=1}^k \mathbb{Z}/n_i\mathbb{Z} = \underbrace{\mathbb{Z}/n_i\mathbb{Z} \times \cdots \times \mathbb{Z}/n_i\mathbb{Z}}_{k\text{-times}}
+$$
+Let $\sigma \in \text{Gal}(R_i / R_{i-1})$, then $\sigma$ is uniquely defined by $\sigma(\alpha_{i-1}), \sigma(\alpha_{i-1,2}), \dots, \sigma(\alpha_{i-1}, k)$. We also know that $\alpha_{i-1}$ is a root of $(x^{n_i} - (\alpha_{i-1,j})^{n_i})$, so $\sigma(\alpha_{i-1},j) = \alpha_{i-1,j} \cdot \omega^{m_j}$ where $\omega^{m_j}$ is a root of $1$ or $\omega$ is sa primitive $n_i$-th root of $1$. 
+
+We define $\psi: \text{Gal}(R_i/R_{i-1}) \rightarrow \mathbb{Z}/n_i\mathbb{Z} \times \cdots \times \mathbb{Z}/n_i\mathbb{Z}$ where $\sigma \rightarrow (m_1, \dots, m_k)$. 
+
+<u>Exercise:</u> $\psi$ is an injective homomorphism $\implies$ $\text{Gal}(R_i/R_{i-1})$ is abelian $\left(\leq \prod_{j = 1}^k \mathbb{Z}/n_i\mathbb{Z}\right)$. 
+
+---
+
+**Theorem:** There exist $\deg 5$ polynomial $\in \mathbb{Z}[x]$ whose roots have no expression in terms of radicals.
+
+**Proof:** We construct a $\deg 5$ polynomial whose Galois group is $S_5$. Notice, that we can generate $S_5$ by a $5$-cycle and a transposition.
+
+- We need an irreducible polynomial ($\implies \text{Gal}(E/F)$ acts transitively on the roots $\implies$ there exists a $5$-cycle)
+
+<u>Exercise:</u> $f = x^5 - 16x + 2$ is irreducible. 
+
+**Lemma:** $f$ has $2$ critical points and $3$ real roots. Let's find the critical points $f' = 5x^4 - 16 = 5\left(x^2 - \frac{4}{\sqrt{5}}\right)\left(x^2 + \frac{4}{\sqrt{5}}\right) \implies x = \pm \frac{2}{\sqrt[4]{5}}$ . 
+
+In particular, $f$ can have $1,2$ or $3$ real roots. We have the following evaluation at the critical points:
+$$
+f(\pm \text{roots}) \approx \pm 12 + 1\implies 3 \text{ roots}
+$$
+
+---
+
+#### Galois Extensions
+
+Let $G = \text{Gal}(E/F)$ and let $H$ be a subset of $G$.  
+
+**Notation:** $E^H = \{\alpha \in E : \sigma(\alpha) = \alpha, \forall\;\sigma \in H\}$ 
+
+**Remark:** Let $H \subset G$, denote $\widetilde{H} \leq G$ to be sobgroup generated by $H \implies E^H = E^{\widetilde{H}}$. 
+
+- Without loss of generality, we always assume $H \leq G$ is a subgroup.
+
+- We can associate a subfield $F \leq E^H \leq E$ to any subgroup $H \leq \text{Gal}(E/F)$ 
+- We can associate a subgroup $Gal(E/K) \leq \text{Gal}(E/F)$ to every subfield $F \leq K \leq E$. 
