@@ -41,14 +41,16 @@
 
 \maketitle
 
-\maketitle
-
 \section*{Important Resources}
 \begin{itemize}
     \item \textbf{Email:} \href{mailto:csl2192@columbia.edu}{csl2192@columbia.edu}
     \item \textbf{Link to Class Webpage:} \href{https://www.math.columbia.edu/~avizeff/additive/index.html}{Click Here}
     \item \textbf{[Johnny] Introduction to Sieves:} \href{https://www.math.columbia.edu/~avizeff/additive/talk_10.pdf}{Click Here}
     \item \textbf{Class Textbook:} \href{http://www.alefenu.com/libri/nathansonbases.pdf}{Additive Number Theory}
+    \item \textbf{Brun's Sieve Reference Material (1):} \href{https://www.math.columbia.edu/~avizeff/additive/talk_12.pdf}{Click Here}
+    \item \textbf{Buun's Sieve Reference Material (2):} \href{https://www.math.columbia.edu/~avizeff/additive/talk_13.pdf}{Click Here}
+    \item \textbf{Selberg's Sieve Reference Material:} \href{https://www.math.columbia.edu/~avizeff/additive/talk_14.pdf}{Click Here}
+    \item \textbf{The Large Sieve Reference Material:} \href{https://columbiauniversity.zoom.us/rec/play/rxd23-9BFy8ZeuEKEmh7rsgU_MFA4J9SygcsxBNFDDySy4bUon6aie6KVECuYWQ1w4XldraaB7LqCxU0.FPuBLFNwvPNu3GKA?autoplay=true&startTime=1712158850000}{Click Here}
 \end{itemize}
 
 \tableofcontents   
@@ -56,15 +58,36 @@
 
 \pagebreak
 \section{Review of Sieves}
-\section{The Parity Problem}
 \subsection{Introduction}
+Sieve methods are pivotal in the realm of number theory for their capacity to discern integers that exhibit particular arithmetic properties, such as primality. 
+Specifically, they are used to answer a core question in number theory related to counting the number of primes from any given set of integers. 
+At a larger scale, sieves work by a process of elimination or ``exclusion''. In the context of prime numbers, we start with the entire set of desired integers and slowly filter out the composite numbers (multiples of some prime) until we are left with a set of only primes. \\
+\\
+In fact, as you will see later on, the versatility of sieves allows you to extend this logic in order to also provide upper and lower bounds on certain progressions of primes (i.e. sequences of twin primes where $p$ and $p+2$ are both prime).
+However, to explain how sieves work and their relation to the parity problem, let's first consider the most basic problem of counting the number of primes in the interval $[N, 2N]$ where $N \in \mathbb{Z}^+$ (the set of positive integers). 
+\subsection{The Counting Prime Problem}
+If the ultimate goal is to ``filter out composite numbers,'' we need to be able to count sets of $n \in [N,2N]$ where $n \equiv a \text{ mod } q$. Specifically, if $a = 0$, we are interested in the set of integers where $n$ is a multiple of some integer $q$. By a simple counting argument, it should be obvious that
+$$
+\left|\{n \in [N,2N] \;:\; n \equiv a \text{ mod }q \}\right| = \frac{N}{q} + \mathcal{O}(1)
+$$
+Now, we can arrive at more interesting results like counting the set of integers coprime to $2$ in the interval $[N,2N]$. Applying the logic above, the set of coprime integers to $2$ can be calculated by subtracting the integers $\equiv 0 \text{ mod }2$ from the total number of integers in the interval $[N,2N]$. 
+Thus, we have the following, which is equivalent to the number of odd integers in the interval $[N,2N]$:
+\begin{align*}
+\left|\{n \in [N,2N]\;:\; n \text{ is coprime to }2\}\right| &= \left|\{n \in [N,2N]\}\right| - \left|\{n \in [N,2N] : n \equiv 0 \text{ mod }2\}\right|\\
+&= \left[N + \mathcal{O}(1)\right] - \left[\frac{N}{2} + \mathcal{O}(1)\right]\\
+&= \frac{N}{2} + \mathcal{O}(1)
+\end{align*}
 
 
 
 \pagebreak
 \section{Sources}
 \begin{itemize}
-    \item 
-\end{itemize}
+  \item Tao, T. (2007, June 5). Open question: The parity problem in sieve theory. What's new. \href{https://terrytao.wordpress.com/2007/06/05/open-question-the-parity-problem-in-sieve-theory/}{https://terrytao.wordpress.com/2007/06/05/open-question-the-parity-problem-in-sieve-theory/}
+  \item Heath-Brown, D. R. (1982). A parity problem from sieve theory. Mathematika, 29(1), 1-6. https://doi.org/10.1112/S0025579300012109
+  \item Math 229: Analytic Number Theory. Illustration of the “parity problem” in Selberg’s sieve: The case of Fq[t]. Math 229: Introduction to Analytic Number Theory. \href{https://people.math.harvard.edu/~elkies/M229.15/muff.pdf}{https://people.math.harvard.edu/~elkies/M229.15/muff.pdf}
+  \item Friedlander, J., \& Iwaniec, H. (2009). What Is... the Parity Phenomenon? Notices of the American Mathematical Society, 56(7), 817–818. \href{https://www.ams.org/notices/200907/rtx090700817p.pdf}{https://www.ams.org/notices/200907/rtx090700817p.pdf}
+  \item Friedlander, J., \& Iwaniec, H. (1997). Using a Parity-Sensitive Sieve to Count Prime Values of a Polynomial. Proceedings of the National Academy of Sciences of the United States of America, 94(4), 1054–1058. http://www.jstor.org/stable/41282
+  \end{itemize}
 
 \end{document}
