@@ -71,12 +71,80 @@ $$
 \left|\{n \in [N,2N] \;:\; n \equiv a \text{ mod }q \}\right| = \frac{N}{q} + \mathcal{O}(1)
 $$
 Now, we can arrive at more interesting results like counting the set of integers coprime to $2$ in the interval $[N,2N]$. Applying the logic above, the set of coprime integers to $2$ can be calculated by subtracting the integers $\equiv 0 \text{ mod }2$ from the total number of integers in the interval $[N,2N]$. 
-Thus, we have the following, which is equivalent to the number of odd integers in the interval $[N,2N]$:
+Thus, we have the following result for the cardinality of the set.
 \begin{align*}
 \left|\{n \in [N,2N]\;:\; n \text{ is coprime to }2\}\right| &= \left|\{n \in [N,2N]\}\right| - \left|\{n \in [N,2N] : n \equiv 0 \text{ mod }2\}\right|\\
 &= \left[N + \mathcal{O}(1)\right] - \left[\frac{N}{2} + \mathcal{O}(1)\right]\\
 &= \frac{N}{2} + \mathcal{O}(1)
 \end{align*}
+If we further extend this notion, we can then count the number of integers coprime to $2$ and $3$ using combinatorial logic (inclusion-exclusion principle). If we label the desired set $N_0$, we have that 
+\begin{align*}
+  N_0 &= \left|\{n \in [N,2N]\}\right| - \left|\{n \in [N,2N] : n \equiv 0 \text{ mod }2\}\right| - \left|\{n \in [N,2N] : n \equiv 0 \text{ mod }3\}\right| + \left|\{n \in [N,2N] : n \equiv 0 \text{ mod }6\}\right|\\
+  &= [N + \mathcal{O}(1)] - \left[\frac{N}{2} + \mathcal{O}(1)\right] - \left[\frac{N}{3} + \mathcal{O}(1)\right] + \left[\frac{N}{6} + \mathcal{O}(1)\right]\\
+  &= \frac{N}{3} + \mathcal{O}(1)
+\end{align*}
+Similar to the case with only coprimality to $2$, we are taking the entire set, subtracting the multiples of $2$ and $3$, and then adding back the multiples of $6$ to account for the double counting. If we continue this principle to a set of larger and larger primes (i.e. numbers that are coprime to $2,3,5,7,\dots$), we can then use the sieve method to count the number of primes in the interval $[N,2N]$. 
+\subsection{Combinatorial Sieves}
+So, if this method above works, then why is the book on primes not closed? Well, it's because inclusion-exclusion blows up exponentially. In fact, as the set of primes with cardinality $k$ grows, the number of terms in our inclusion-exclusion grows exponentially to $2^k$. With an error term of $\mathcal{O}(1)$ for each term, the error term can - at worst - be $\mathcal{O}(2^k)$. In fact, after $k > \log N$ steps, our error term blows up to be so large that all results seem virtually meaningless.\\
+\\
+Now, instead of getting a perfect result with a massive error term, what if we got an upper-or-lower bound? By simply truncating the sum at some point, we can get a bound that is more managable and meaningful. And although this was covered in my talk on Brun's sieve and its relation to twin primes, I think the problem is interesting and important to our discussion of sieves. \\
+\\
+Specifically, if you enumerate the primes $P = \{p_1, p_2, p_3, \dots, p_r\}$ and consider the some subset of those primes $I \subset P$, we can define the set $N(I)$ as the integers in the interval $[N,2N]$ that are divisible by all primes in $I$. 
+Then, we can use the sieve method described in Section 1.2 to count the number of integers not divisble by any of the primes in $P$, which we will label $N_0$. Finally, it is easy to see that if the sum truncates at an even $r$, then we have an upper bound.
+$$
+N_0 \leq \sum_{k=0}^r (-1)^k \sum_{|I| = k} N(I)  \quad \quad \text{ if } r \text{ is even}
+$$
+And if the sum truncates at an odd $r$, then we have an lower bound.
+$$
+N_0 \geq \sum_{k=0}^r (-1)^k \sum_{|I| = k} N(I)  \quad \quad \text{ if }r \text{ is odd}
+$$
+This type of logic is the basis for all combinatorial sieves.
+
+\pagebreak
+\subsection{Further Sieves} 
+However, this is still is not good enough for our purposes. The ``black and white'' approach of combinatorial sieves, where numbers are either completely included or excluded based on their divisibility, is limited in scope. 
+It's not nuanced enough for complex tasks such as estimating the distribution of primes within a specific range. 
+This method tends to either overestimate or underestimate the count as it doesn't account for the subtleties of number distribution and the influence of factors such as prime gaps. \\
+\\
+However, modern sieve theory has adjusted for this sublety by using sum of weight functions. 
+At a higher level, these weight functions provide a more nuanced approach, allowing for partial contributions of terms in sums that more accurately reflect the number theoretic structures being studied. 
+These partial contributions can be fine-tuned to minimize error terms and thus improve the accuracy of prime number estimates through more complex theorems (which we will exclude for the sake of brevity). \\
+\\
+To show how these weight functions work, start with the basic equation where $1_A(n)$ is the indicator function of $A$.
+$$
+|A| = \sum_{n \in [N,2N]} 1_A(n)
+$$
+If we carefully chose $c_d \in \mathbb{R}$ such that $1_A(n) \leq \sum_{d} c_d 1_{d \mid n} (n)$ for all $n \in [N,2N]$, then we can rewrite our bound as follows.
+$$
+|A| \leq N \sum_{d} \frac{c_d}{d} + \mathcal{O}\left(\sum_{d} |c_d| \right)
+$$
+If we continue to add additional weights or include more residue classes in our summation, we can take this basic idea of weighted combinatorial sum and extend it to more complex problems like counting twin primes.\\
+\\
+In terms of choosing weights, first notice that the choice of $c_d = \{0,\pm 1\}$ is the combinatorial sieve we discussed earlier. 
+And, similar to the issues that we've seen in the above sieves, the main problem in choosing weights is to make sure that the $c_d$ are chosen such that $\mathcal{O}\left(\sum_{d} |c_d|\right)$ doesn't swamp our main bounding term. Explicitly, we usually pick $c_d \leq N^\epsilon$ where $N^\epsilon$ is some very small power of $N$. This concludes our discussion of sieves!
+
+
+
+
+\section{The Parity Problem}  
+\subsection{Introduction}
+Now, the problem with sieves is something - originally introduced by Selberg - that prevents us from counting or lower bounding the primes themselves. So although sieves can provide good upper bounds, lower bounds, and even asymptotic approximations for ``almost primes'', their inability to distinguish between integers with an odd or even number of prime factors - hence the term "parity" - causes an oversight on the subtle arithmetic properties that would allow for our desired precise lower bounds on primes.
+\subsection{The Problem}
+Formally, the Parity Problem is stated as follows.
+\begin{boxedsection}
+\textbf{Definition:} If $A$ is a set whose elements are all products of an odd number of primes (or are all products of an even number of primes), then (without injecting additional ingredients), sieve theory is unable to provide non-trivial lower bounds on the size of $A$. Also, any upper bounds must be off from the truth by a factor of $2$ or more.
+\end{boxedsection}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  15 MAR 2024 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  9 APR 2024 22:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex"
-(/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex
+**"/Users/connorli/Documents/GitHub/s2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex"
+(/Users/connorli/Documents/GitHub/s2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
@@ -1351,12 +1351,12 @@ Package rerunfilecheck Info: File `bruns-and-twin.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  31255 strings out of 476025
- 593432 string characters out of 5790017
+ 593417 string characters out of 5790017
  1892388 words of memory out of 5000000
  51088 multiletter control sequences out of 15000+600000
  532553 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,128p,7244b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,128p,7239b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
 Output written on bruns-and-twin.pdf (6 pages, 230626 bytes).
 PDF statistics:

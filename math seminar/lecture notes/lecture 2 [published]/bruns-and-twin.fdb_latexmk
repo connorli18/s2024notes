@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1710538728 "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" "bruns-and-twin.pdf" "bruns-and-twin" 1710538729 0
-  "/Users/connorli/Documents/GitHub/spring2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" 1710538728 21528 f1f180e25063be902e743c97859f5bdc ""
+["pdflatex"] 1712714895 "/Users/connorli/Documents/GitHub/s2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" "bruns-and-twin.pdf" "bruns-and-twin" 1712714896 0
+  "/Users/connorli/Documents/GitHub/s2024notes/math seminar/lecture notes/lecture 2 [published]/bruns-and-twin.tex" 1710945723 21528 f1f180e25063be902e743c97859f5bdc ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1177804218 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1177804218 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
@@ -272,10 +272,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705206871 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705206848 7883458 f6e9493ae836a2efb38410cc398d6a8b ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "bruns-and-twin.aux" 1710538729 2357 0ef9f21f73e5db00e47b018e9888b2db "pdflatex"
-  "bruns-and-twin.out" 1710538729 1824 69d3f9542c34387742cf01e95f0d935f "pdflatex"
-  "bruns-and-twin.tex" 1710538728 21528 f1f180e25063be902e743c97859f5bdc ""
-  "bruns-and-twin.toc" 1710538729 1091 6545f14b60595eef0cfd1915793fb7db "pdflatex"
+  "bruns-and-twin.aux" 1712714895 2357 0ef9f21f73e5db00e47b018e9888b2db "pdflatex"
+  "bruns-and-twin.out" 1712714895 1824 69d3f9542c34387742cf01e95f0d935f "pdflatex"
+  "bruns-and-twin.tex" 1710945723 21528 f1f180e25063be902e743c97859f5bdc ""
+  "bruns-and-twin.toc" 1712714895 1091 6545f14b60595eef0cfd1915793fb7db "pdflatex"
   (generated)
   "bruns-and-twin.aux"
   "bruns-and-twin.log"
