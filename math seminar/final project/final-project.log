@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  10 APR 2024 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  15 APR 2024 14:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -8,8 +8,8 @@ entering extended mode
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(/usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/size8.clo
-File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
@@ -1161,27 +1161,38 @@ Package: ocgbase 2022/08/04 v0.22 support package for ocgx2.sty
 \@anim@lineno=\count349
 \@anim@curfield=\count350
 \@anim@@resizeflags=\count351
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip133
+\f@nch@O@elh=\skip134
+\f@nch@O@erh=\skip135
+\f@nch@O@olh=\skip136
+\f@nch@O@orh=\skip137
+\f@nch@O@elf=\skip138
+\f@nch@O@erf=\skip139
+\f@nch@O@olf=\skip140
+\f@nch@O@orf=\skip141
 ) (./final-project.aux)
 \openout1 = `final-project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count352
@@ -1201,13 +1212,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 40.
+Package hyperref Info: Link coloring OFF on input line 45.
  (./final-project.out) (./final-project.out)
 \@outlinefile=\write4
 \openout4 = `final-project.out'.
 
-LaTeX Info: Command `\dddot' is already robust on input line 40.
-LaTeX Info: Command `\ddddot' is already robust on input line 40.
+LaTeX Info: Command `\dddot' is already robust on input line 45.
+LaTeX Info: Command `\ddddot' is already robust on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1218,22 +1229,22 @@ LaTeX Info: Command `\ddddot' is already robust on input line 40.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(42.67912pt, 528.93675pt, 42.67912pt)
-* v-part:(T,H,B)=(42.67912pt, 738.0645pt, 14.22636pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=528.93675pt
-* \textheight=738.0645pt
+* \textheight=652.70622pt
 * \oddsidemargin=-29.59087pt
 * \evensidemargin=-29.59087pt
-* \topmargin=-70.59087pt
+* \topmargin=-42.1381pt
 * \headheight=16.0pt
 * \headsep=25.0pt
-* \topskip=9.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=74.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=7.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1243,11 +1254,11 @@ LaTeX Info: Command `\ddddot' is already robust on input line 40.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./final-project.toc)
@@ -1257,60 +1268,96 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 62--68
+Underfull \hbox (badness 10000) in paragraph at lines 67--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--94
+Underfull \hbox (badness 10000) in paragraph at lines 93--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--94
+Underfull \hbox (badness 10000) in paragraph at lines 93--99
 
  []
 
-[2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 105--114
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--114
+[2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 108--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+Underfull \hbox (badness 10000) in paragraph at lines 108--117
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--128
+
+ []
+
+[3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 135.
-[3]
-Overfull \hbox (4.55289pt too wide) in paragraph at lines 154--155
-[]\OT1/cmr/m/n/8 Tao, T. (2007, June 5). Open ques-tion: The par-ity prob-lem in sieve the-ory. What's new. []https://terrytao.wordpress.com/2007/06/05/open-
+(mdframed)              on input line 138.
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--145
+
  []
 
-[4] (./final-project.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--160
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--203
+
+ []
+
+[5{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}] [6]
+Overfull \hbox (98.84227pt too wide) in paragraph at lines 224--225
+[]\OT1/cmr/m/n/10 Tao, T. (2007, June 5). Open ques-tion: The par-ity prob-lem in sieve the-ory. What's new. []https://terrytao.wordpress.com/2007/06/05/open-
+ []
+
+
+Overfull \hbox (79.36911pt too wide) in paragraph at lines 225--226
+[]\OT1/cmr/m/n/10 Heath-Brown, D. R. (1982). A par-ity prob-lem from sieve the-ory. Math-e-matika, 29(1), 1-6. https://doi.org/10.1112/S0025579300012109 
+ []
+
+
+Overfull \hbox (44.27737pt too wide) in paragraph at lines 228--229
+\OT1/cmr/m/n/10 ings of the Na-tional Academy of Sci-ences of the United States of Amer-ica, 94(4), 1054{1058. http://www.jstor.org/stable/41282 
+ []
+
+[7] (./final-project.aux)
 Package rerunfilecheck Info: File `final-project.out' has not changed.
-(rerunfilecheck)             Checksum: 6BB5F1B18BE7C159ADFB221835EF916A;1181.
+(rerunfilecheck)             Checksum: 95FF5A487581A87016F64CCC49B3B49C;1975.
  ) 
 Here is how much of TeX's memory you used:
- 31242 strings out of 476025
- 593165 string characters out of 5790017
- 1872388 words of memory out of 5000000
- 51083 multiletter control sequences out of 15000+600000
- 532553 words of font info for 100 fonts, out of 8000000 for 9000
+ 31476 strings out of 476025
+ 596419 string characters out of 5790017
+ 1870388 words of memory out of 5000000
+ 51295 multiletter control sequences out of 15000+600000
+ 536513 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,128p,7216b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on final-project.pdf (4 pages, 192282 bytes).
+ 84i,12n,128p,7216b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on final-project.pdf (7 pages, 218382 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 16 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 
