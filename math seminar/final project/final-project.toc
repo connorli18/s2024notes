@@ -10,4 +10,9 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Overview of The Selberg Problem}{4}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Formal Analysis of the Parity Problem}{5}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Overcoming the Parity Problem}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Overview}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Prime Number Theorem}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Special Prime Counting}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Almost Primes and Combinatorics}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Future Research Development}{7}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Sources}{7}{section.4}%

@@ -28,6 +28,8 @@
 \usepackage{MnSymbol}
 \usepackage{animate}
 \usepackage{physics}
+\usepackage{url} % Import url package
+
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -202,30 +204,64 @@ Ultimately, since all prime numbers have an odd number of prime factors, sieve m
 And in the field of number theory, this is a very significant problem since the inability to distinguish between integers with odd or even number of prime factors prevents us from accurately counting the number of primes in a given interval.
 
 
+
+
+
+
+
 \pagebreak
 \section{Overcoming the Parity Problem}
+\subsection{Overview}
+The quest to count prime numbers and understand their distribution among integers has led to the development of sophisticated techniques in analytic and algebraic number theory. 
+These techniques extend beyond the classical sieve theory, particularly when addressing complex forms such as quadratic and higher-degree polynomials.
+
+\subsection{Prime Number Theorem}
+A foundational result in the field is the Prime Number Theorem (PNT), which predicts the asymptotic distribution of primes. The PNT was initially proven using complex analysis methods by Hadamard and de la Vallée Poussin. A link of this proof is included \href{https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2975232/fulltext.pdf}{here}. \\
+\\
+An alternative "elementary" proof, one that avoids complex analysis, was later provided by Erdős and Selberg. This proof utilizes the multiplicative structure of primes and almost primes—numbers with only a small number of prime factors. The idea here hinges on showing that the density of these almost primes mimics, to some extent, the density of prime numbers. However, this elementary approach faces limitations when applied to more complex scenarios, such as counting twin primes (pairs of primes that differ by two), where the product of such primes does not fall neatly into the established frameworks of almost primes. A link of this proof is included \href{https://www.math.columbia.edu/~goldfeld/ErdosSelbergDispute.pdf}{here}.
+
+
+\subsection{Special Prime Counting}
+The work of Friedlander and Iwaniec marked a significant breakthrough in counting primes represented by specific polynomial forms. They demonstrated that there are infinitely many prime numbers of the form $a^2 + b^4$. 
+This result was achieved through an intricate argument beginning with Vaughan’s identity—an advanced tool in sieve theory that introduces an exact representation with a bilinear error term. This term, essentially capturing correlations with the Liouville function, required meticulous control through arithmetic manipulations, including factorization over the Gaussian integers. A crucial part of their analysis was understanding the interactions between the Möbius function and the Jacobi symbol, achieved using a variety of number-theoretic techniques.\\
+\\
+This method was further adapted by Heath-Brown to prove the infinitude of primes of the form $a^3 + 2b^3$, and similar methods have been applied to other cubic forms by researchers such as Heath-Brown, Moroz, and Helfgott. These results generally hinge on representing the forms as norms over certain number fields, highlighting the deep connections between number theory and algebraic structures.
+
+
+
+\subsection{Almost Primes and Combinatorics}
+One strategy to overcome the parity problem involves the utilization of almost primes, specifically $P_2$-almost primes (numbers with exactly two prime factors), possibly repeated. Consider a set 
+$A$ within a given range from $N$ to $2N$ that includes numbers $n$ such that both $n, \;n+2, \;
+n+2, \;n+6$ are elements of $P_2$. By obtaining accurate counts of these almost primes and combining this information with bounds on the number of true primes, one can use combinatorial techniques to lower bounds on prime occurrences.\\
+\\
+Then, using pigeonhole principle, a fundamental combinatorial principle, one can deduce the existence of at least one number in the specified range such that $n, \;n+2, \;n+6$ are all prime, assuming the subsets 
+$A_1, \;A_2,\;A_3$ are sufficiently large. This result would imply the existence of at least two primes in the triplet $(n,n+2,n+6)$, presenting a maximum prime gap of $6$. \\
+\\
+While the naive approach of directly using $P_2$-almost primes can offer some insights, further optimizations can be achieved. For example, replacing the condition that $n, \; n+2, \;n+6 \in P_2$ with a more nuanced condition involving more general forms of almost primes can yield stronger results!
 
 
 
 
 
 
+\subsection{Future Research Development}
+Despite the parity problem, the number theory field related to sieves continues to evolve. 
+Researchers are actively exploring both broader applications of these existing sieve methods and entirely new approaches that may finally circumvent the limitations posed by the parity problem. 
+The ongoing work promises not only deeper insights into the distribution of primes but also advancements in the tools of algebraic and analytic number theory itself.
+This exploration into the counting of primes in special forms not only extends our understanding of prime distribution but also continuously pushes the boundaries of mathematical research, offering glimpses into the profound interconnectedness of different mathematical domains.
 
 
 
-
-
-
-
-
-\pagebreak
 \section{Sources}
 \begin{itemize}
-  \item Tao, T. (2007, June 5). Open question: The parity problem in sieve theory. What's new. \href{https://terrytao.wordpress.com/2007/06/05/open-question-the-parity-problem-in-sieve-theory/}{https://terrytao.wordpress.com/2007/06/05/open-question-the-parity-problem-in-sieve-theory/}
-  \item Heath-Brown, D. R. (1982). A parity problem from sieve theory. Mathematika, 29(1), 1-6. https://doi.org/10.1112/S0025579300012109
-  \item Math 229: Analytic Number Theory. Illustration of the “parity problem” in Selberg’s sieve: The case of Fq[t]. Math 229: Introduction to Analytic Number Theory. \href{https://people.math.harvard.edu/~elkies/M229.15/muff.pdf}{https://people.math.harvard.edu/~elkies/M229.15/muff.pdf}
-  \item Friedlander, J., \& Iwaniec, H. (2009). What Is... the Parity Phenomenon? Notices of the American Mathematical Society, 56(7), 817–818. \href{https://www.ams.org/notices/200907/rtx090700817p.pdf}{https://www.ams.org/notices/200907/rtx090700817p.pdf}
-  \item Friedlander, J., \& Iwaniec, H. (1997). Using a Parity-Sensitive Sieve to Count Prime Values of a Polynomial. Proceedings of the National Academy of Sciences of the United States of America, 94(4), 1054–1058. http://www.jstor.org/stable/41282
+  \item Tao, T. (2007, June 5). Open question: The parity problem in sieve theory. What's new.\\  \url{https://terrytao.wordpress.com/2007/06/05/open-question-the-parity-problem-in-sieve-theory/}.
+  \item Heath-Brown, D. R. (1982). A parity problem from sieve theory. Mathematika, 29(1), 1-6. \url{https://doi.org/10.1112/S0025579300012109}.
+  \item Math 229: Analytic Number Theory. Illustration of the “parity problem” in Selberg’s sieve: The case of Fq[t]. Math 229: Introduction to Analytic Number Theory. \url{https://people.math.harvard.edu/~elkies/M229.15/muff.pdf}.
+  \item Friedlander, J., \& Iwaniec, H. (2009). What Is... the Parity Phenomenon? Notices of the American Mathematical Society, 56(7), 817–818. \url{https://www.ams.org/notices/200907/rtx090700817p.pdf}.
+  \item Friedlander, J., \& Iwaniec, H. (1997). Using a Parity-Sensitive Sieve to Count Prime Values of a Polynomial. Proceedings of the National Academy of Sciences of the United States of America, 94(4), 1054–1058. \url{http://www.jstor.org/stable/41282}.
+  \item Zagier, D. (1997). Newman's Short Proof of the Prime Number Theorem. The American Mathematical Monthly, 104(8), 705-708. Mathematical Association of America. Retrieved from \url{http://www.jstor.org/stable/2975232}.
+  \item Goldfeld, D. (n.d.). THE ELEMENTARY PROOF OF THE PRIME NUMBER THEOREM: AN HISTORICAL PERSPECTIVE. Retrieved from \url{https://www.math.columbia.edu/~goldfeld/ErdosSelbergDispute.pdf}.
+  \item Wikipedia contributors. (n.d.). Parity problem (sieve theory). In Wikipedia, The Free Encyclopedia. Retrieved from \url{https://en.wikipedia.org/wiki/Parity_problem_(sieve_theory)}.
   \end{itemize}
 
 \end{document}
