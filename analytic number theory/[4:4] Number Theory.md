@@ -139,7 +139,7 @@ $$
 $$
 |a(n)| \ll n^{\frac{k}{2} + \epsilon}
 $$
-**Theorem:** Let $s \in \mathbb{C}$. Then $L(s,f)$ has a meromorphic continuation to all $\mathbb{C}$ with a most a simple pole at $\Re(s) = \frac{k+1}{2}$ if $a_0 \neq 0$. If $a_0 = 0$, then $L(s,f)$ is entire. Furthermore, $L(s,f)$ satisfies a functional equation $s \rightarrow k-s$ (?) 
+**Theorem:** Let $s \in \mathbb{C}$. Then $L(s,f)$ has a mceromorphic continuation to all $\mathbb{C}$ with a most a simple pole at $\Re(s) = \frac{k+1}{2}$ if $a_0 \neq 0$. If $a_0 = 0$, then $L(s,f)$ is entire. Furthermore, $L(s,f)$ satisfies a functional equation $s \rightarrow k-s$ (?)  
 
 **Idea (Hecke):** Take the Mellin transform at $f(1,y)$. 
 $$
