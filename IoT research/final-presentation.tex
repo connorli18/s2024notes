@@ -1,0 +1,139 @@
+\documentclass[10pt]{extarticle} 
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{mathabx}
+\usepackage[bottom=2.5cm, right=1.5cm, left=1.5cm, top=2.5cm, headheight=16pt]{geometry}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{cancel}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\makeatletter
+\newcases{crcases}{\quad}{%
+  \hfil$\m@th\displaystyle{##}$\hfil}{\hfil$\m@th\displaystyle{##}$}{\lbrace}{.}
+\makeatother
+\usepackage{mdframed}
+\usepackage{tikzlings}
+\usepackage{tikzducks}
+\usepackage{MnSymbol}
+\usepackage{animate}
+\usepackage{physics}
+\usepackage{url} % Import url package
+\usepackage{listings}
+\usepackage{fancyhdr}
+
+% Setting the appearance of the listings
+\lstset{
+    basicstyle=\ttfamily\small,
+    columns=fullflexible,
+    breaklines=true,
+    language=Python, % specify the programming language
+    frame=single, % adds a frame around the code
+    showstringspaces=false % do not replace spaces in strings with a visual marker
+}
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage} % Left header
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+
+
+\title{[IoT Firewall] Research Notes}
+\author{Connor Li, csl2192}
+\date{Spring 2024}
+
+\newmdenv{boxedsection}
+
+\begin{document}
+
+\maketitle
+
+\section*{Notes}
+How to set up the network topology.
+\begin{lstlisting}[language=Python]
+    # start network topology
+    make clean
+    make
+
+    # in mininet
+    xterm h1 h2 h3
+
+    # new terminal
+    sudo python3 controller.py
+
+    # new terminal
+    # will be used for blocking
+\end{lstlisting}
+Let's show how regular packets get sent through.
+\begin{lstlisting}
+    # in h2, h3
+    sudo python3 recieve.py
+
+    # in h1
+    sudo python3 send.py h2/h3 'I love P4'
+
+    # You should see in controller terminal that packets are being sent
+    # You should see that h2, h3 are printing out packets
+\end{lstlisting}
+Now, let's show that large packets are dropped.
+\begin{lstlisting}
+    # in h2
+    sudo python3 recieve.py
+
+    # in h1
+    sudo python3 large-send.py h2
+
+    # You should see that the controller is registering sending packets of size > 1000
+    # You should see that h2, h3 are not printing out packets because the switch drops them
+\end{lstlisting}
+Now, let's show that we can write table rules to drop packets.
+\begin{lstlisting}
+    # in h2, h3
+    sudo python3 recieve.py
+
+    # in h1
+    sudo python3 send.py h2/h3 'I love P4'
+
+    # You should see that the controller is registering sending packets
+    # You should see that the packets are going through
+
+    # Now, in a new terminal, run the following
+    sudo python3 block.py h2
+
+    # Now, in h1, try sending packets
+    sudo python3 send.py h2/h3 'I love P4'
+
+    # You should see that the controller is registering sending packets
+    # You should see that the packets are not going through to h2, but still going through to h3
+\end{lstlisting}
+Now, restart the controller. Let's show the packet-rate blocking feature.
+\begin{lstlisting}
+    #new terminal, refresh the controller and the mininet
+    make clean
+    make
+    xterm h1 h2 h3
+    sudo python3 controller.py
+    
+    # in h2
+    sudo python3 recieve.py
+
+    # in h1
+    sudo python3 spam-send.py h2 --duration 10 'i love p4'
+
+    # You should see that the controller is registering sending packets
+    # You should see in the controller temrinal that h1 disconnects!
+\end{lstlisting}
+
+\end{document}

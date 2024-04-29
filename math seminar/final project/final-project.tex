@@ -67,18 +67,19 @@
 \section{Review of Sieves}
 \subsection{Introduction}
 Sieve methods are pivotal in the realm of number theory for their capacity to discern integers that exhibit particular arithmetic properties, such as primality. 
-Specifically, they are used to answer a core question in number theory related to counting the number of primes from any given set of integers. 
-At a larger scale, sieves work by a process of elimination or ``exclusion''. In the context of prime numbers, we start with the entire set of desired integers and slowly filter out the composite numbers (multiples of some prime) until we are left with a set of only primes. \\
+Specifically, they are used to answer a core question in number theory related to counting the number of primes from any given set of integers. \\
 \\
-In fact, as you will see later on, the versatility of sieves allows you to extend this logic in order to also provide upper and lower bounds on certain progressions of primes (i.e. sequences of twin primes where $p$ and $p+2$ are both prime).
-However, to explain how sieves work and their relation to the parity problem, let's first consider the most basic problem of counting the number of primes in the interval $[N, 2N]$ where $N \in \mathbb{Z}^+$ (the set of positive integers). 
+At a larger scale, sieves work by a process of elimination or ``exclusion''. In the context of prime numbers, this means that we start with the entire set of desired integers and slowly filter out the composite numbers (multiples of some prime) until we are left with a set of only primes. \\
+\\
+In fact, the versatility of sieves allows you to extend this logic in order to also provide upper and lower bounds on certain progressions of primes (i.e. sequences of twin primes where $p$ and $p+2$ are both prime), which we will not cover explicitly in this paper (but there are a lot of resources online for you to delve into).
+However, to explain how sieves work and their relation to the parity problem, let's first consider the most elementary problem of counting the number of primes in the interval $[N, 2N]$ where $N \in \mathbb{Z}^+$ (the set of positive integers). 
 \subsection{The Counting Prime Problem}
-If the ultimate goal is to ``filter out composite numbers,'' we need to be able to count sets of $n \in [N,2N]$ where $n \equiv a \text{ mod } q$. Specifically, if $a = 0$, we are interested in the set of integers where $n$ is a multiple of some integer $q$. By a simple counting argument, it should be obvious that
+If the ultimate goal is to ``filter out composite numbers'' using our sieve, we need to be able to count sets of $n \in [N,2N]$ where $n \equiv a \text{ mod } q$. Specifically, if $a = 0$, we are interested in the set of integers where $n$ is a multiple of some integer $q$. By a simple counting argument, it should be obvious that
 $$
 \left|\{n \in [N,2N] \;:\; n \equiv a \text{ mod }q \}\right| = \frac{N}{q} + \mathcal{O}(1)
 $$
-Now, we can arrive at more interesting results like counting the set of integers coprime to $2$ in the interval $[N,2N]$. Applying the logic above, the set of coprime integers to $2$ can be calculated by subtracting the integers $\equiv 0 \text{ mod }2$ from the total number of integers in the interval $[N,2N]$. 
-Thus, we have the following result for the cardinality of the set.
+Building off that, let's consider the problem of counting the set of integers coprime to $2$ in the interval $[N,2N]$. Specifically, the set of coprime integers to $2$ can be calculated by subtracting the integers $\equiv 0 \text{ mod }2$ from the total number of integers in the interval $[N,2N]$. 
+Thus, we have the following result for the cardinality of our desired set.
 \begin{align*}
 \left|\{n \in [N,2N]\;:\; n \text{ is coprime to }2\}\right| &= \left|\{n \in [N,2N]\}\right| - \left|\{n \in [N,2N] : n \equiv 0 \text{ mod }2\}\right|\\
 &= \left[N + \mathcal{O}(1)\right] - \left[\frac{N}{2} + \mathcal{O}(1)\right]\\
@@ -90,7 +91,7 @@ If we further extend this notion, we can then count the number of integers copri
   &= [N + \mathcal{O}(1)] - \left[\frac{N}{2} + \mathcal{O}(1)\right] - \left[\frac{N}{3} + \mathcal{O}(1)\right] + \left[\frac{N}{6} + \mathcal{O}(1)\right]\\
   &= \frac{N}{3} + \mathcal{O}(1)
 \end{align*}
-Similar to the case with only coprimality to $2$, we are taking the entire set, subtracting the multiples of $2$ and $3$, and then adding back the multiples of $6$ to account for the double counting. If we continue this principle to a set of larger and larger primes (i.e. numbers that are coprime to $2,3,5,7,\dots$), we can then use the sieve method to count the number of primes in the interval $[N,2N]$. 
+Similar to the case where we consider the integers coprime to $2$, we start with the entire set, subtracting the multiples of $2$ and $3$, and then adding back the multiples of $6$ to account for the double counting. If we extend this to a  larger and larger set of primes (i.e. numbers that are coprime to $2,3,5,7,\dots$), we can then use the sieve method to estimate the number of primes in the interval $[N,2N]$. 
 \subsection{Combinatorial Sieves}
 So, if this method above works, then why is the book on primes not closed? Well, it's because inclusion-exclusion blows up exponentially. In fact, as the set of primes with cardinality $k$ grows, the number of terms in our inclusion-exclusion grows exponentially to $2^k$. With an error term of $\mathcal{O}(1)$ for each term, the error term can - at worst - be $\mathcal{O}(2^k)$. In fact, after $k > \log N$ steps, our error term blows up to be so large that all results seem virtually meaningless.\\
 \\
@@ -108,8 +109,7 @@ $$
 This type of logic is the basis for all combinatorial sieves.
 \subsection{Further Sieves} 
 However, this is still is not good enough for our purposes. The ``black and white'' approach of combinatorial sieves, where numbers are either completely included or excluded based on their divisibility, is limited in scope. 
-It's not nuanced enough for complex tasks such as estimating the distribution of primes within a specific range. 
-This method tends to either overestimate or underestimate the count as it doesn't account for the subtleties of number distribution and the influence of factors such as prime gaps. \\
+It's not nuanced enough for complex tasks such as estimating the distribution of primes within a specific range. In fact, this method tends to either overestimate or underestimate the count as it doesn't account for the subtleties of number distribution and the influence of factors such as prime gaps. \\
 \\
 However, modern sieve theory has adjusted for this sublety by using sum of weight functions. 
 At a higher level, these weight functions provide a more nuanced approach, allowing for partial contributions of terms in sums that more accurately reflect the number theoretic structures being studied. 
@@ -152,27 +152,27 @@ Imagine you have some set $A$ defined as the set of integers less than or equal 
 $$
 A = \left\{n \in [1,x] \;:\; n \neq 0 \text{ mod }p, \;\forall p\leq x^{\frac{1}{2}} \text{ and } n \text{ has an even number of prime factors}\right\}
 $$
-If we try to find the cardinality of set $A$, no matter what type of sieve we use (and any choice of weights for those sieves), the upper bound for this set is always the following.
+In the next section, we will prove the next proposition; but if we try to find the cardinality of set $A$, no matter what type of sieve we use (and any choice of weights for those sieves), the upper bound for this set is always the following.
 $$
 |A| \leq \frac{(2 + \mathcal{O}(1))x}{\ln(x)}
 $$
-However, if you think about this set logically, the cardinality of set $|A|$ should always be $0$. This should be fairly obvious, but if some $n$ has an even number of prime factors, at least one of them must be $\leq x^{\frac{1}{2}}$, which means that $|A|$ must be of cardinality $0$. As you can see, in the case of only even prime factors, sieve methods are pretty much unable to generate any meaningful bound on the defined set $A$. \\
+However, this bound isn't good at all because if you think about this set logically, the cardinality of set $|A|$ should always be $0$. This should be fairly obvious, but if some $n$ has an even number of prime factors, at least one of them must be $\leq x^{\frac{1}{2}}$, which means that $|A|$ must be of cardinality $0$. As you can see, in the case of only even prime factors, sieve methods are pretty much unable to generate any meaningful bound on the defined set $A$. \\
 \\
 Similarly, take the same problem but only consider those numbers with an odd number of prime factors. So now, the set $A$ is defined as
 $$
 A = \left\{n \in [1,x] \;:\; n \neq 0 \text{ mod }p, \;\forall p\leq x^{\frac{1}{2}} \text{ and } n \text{ has an odd number of prime factors}\right\}
 $$
-Similarly, no matter what type of basic sieve we use and the weights we pair with said sieve, the upper bound for this set is always the following.
+No matter what type of basic sieve we use and the weights we pair with said sieve (which weill will prove in the next section), the upper bound for this set is always as follows.
 $$
 |A| \leq \frac{(2 + \mathcal{O}(1)) \cdot x}{\ln(x)}
 $$
-If you think about this set outside of the concept of sieves, the elements of $A$ are just the prime numbers from $(x^{\frac{1}{2}}, x]$, which we we can count using the PNT (prime number theorem). However, if we use sieve methods to estimate this set, we get a looser bound compared to the prime number theorem.
+However, this bound is terrible! If you think about this set outside of the concept of sieves, the elements of $A$ are just the prime numbers from $(x^{\frac{1}{2}}, x]$, which we we can count using the PNT (prime number theorem). However, if we use sieve methods to estimate this set, we get a looser bound compared to the prime number theorem.
 $$
 |A| \leq \underbrace{\frac{\left(1 + \mathcal{O}(1)\right) \cdot x}{\ln (x)}}_{\text{PNT}} \leq \underbrace{\frac{(2 + \mathcal{O}(1)) \cdot x}{\ln(x)}}_{\text{Sieve Methods}}
 $$
-As you can clearly see, the sieve method is unable to bound this significantly and actually overestimate the upper bound on the second set by a factor of $2$.
+So as you can clearly see, the sieve method is unable to bound the set $A$ and actually overestimates the upper bound on the second set by a factor of $2$.
 \subsubsection{Formal Analysis of the Parity Problem}
-To provide a more formal analysis of the parity problem, let's introduce the following Liouville function $\lambda(n)$.
+As promised, let's delve into specifics. To provide a more formal analysis of the parity problem, let's introduce the following Liouville function $\lambda(n)$.
 $$
 \lambda(n) = \begin{cases}
   +1 & \text{ if } n \text{ has an even number of prime factors}\\
@@ -201,7 +201,7 @@ Similarly, if we use the case where $1 -\lambda(n)$ to quantify the new set $A$ 
 And although the proof is somewhat more involved, the general idea is that $2 \geq 1 - \lambda(n)$, which lets us bound the set $A$ in a non-meaningful way.\\
 \\
 Ultimately, since all prime numbers have an odd number of prime factors, sieve methods are unable to provide non-trivial lower bounds on the number of primes in a given interval. 
-And in the field of number theory, this is a very significant problem since the inability to distinguish between integers with odd or even number of prime factors prevents us from accurately counting the number of primes in a given interval.
+And in the field of number theory, this is a very significant problem since the question of primes is central to the field and current research.
 
 
 
@@ -212,7 +212,7 @@ And in the field of number theory, this is a very significant problem since the 
 \pagebreak
 \section{Overcoming the Parity Problem}
 \subsection{Overview}
-The quest to count prime numbers and understand their distribution among integers has led to the development of sophisticated techniques in analytic and algebraic number theory. 
+However, not all hope is lost! The quest to count prime numbers and understand their distribution among integers has led to the development of sophisticated techniques in analytic and algebraic number theory. 
 These techniques extend beyond the classical sieve theory, particularly when addressing complex forms such as quadratic and higher-degree polynomials.
 
 \subsection{Prime Number Theorem}
@@ -230,25 +230,31 @@ This method was further adapted by Heath-Brown to prove the infinitude of primes
 
 
 \subsection{Almost Primes and Combinatorics}
-One strategy to overcome the parity problem involves the utilization of almost primes, specifically $P_2$-almost primes (numbers with exactly two prime factors), possibly repeated. Consider a set 
-$A$ within a given range from $N$ to $2N$ that includes numbers $n$ such that both $n, \;n+2, \;
-n+2, \;n+6$ are elements of $P_2$. By obtaining accurate counts of these almost primes and combining this information with bounds on the number of true primes, one can use combinatorial techniques to lower bounds on prime occurrences.\\
+One strategy to overcome the parity problem involves the utilization of almost primes interlayed with combinatorial techniques to achieve lower bounds on certain prime progressions.
+Although this sounds daunting and may seem unclear at first, let's consider the following example.\\
 \\
-Then, using pigeonhole principle, a fundamental combinatorial principle, one can deduce the existence of at least one number in the specified range such that $n, \;n+2, \;n+6$ are all prime, assuming the subsets 
-$A_1, \;A_2,\;A_3$ are sufficiently large. This result would imply the existence of at least two primes in the triplet $(n,n+2,n+6)$, presenting a maximum prime gap of $6$. \\
+Define $P_2$ as the set of all numbers in the interval $[N,2N]$ that have exactly two prime factors and the set $A$ as follows.
+$$
+P_2 = \{n \in [N,2N] \;:\; n, n+2, n+6 \in P_2\}
+$$
+Now, suppose that you were able to get good lower bounds on the following sets.
+\begin{align*}
+  A_1 &= \{n \in [N,2N] \;:\; n \text{ prime}\}\\
+  A_2 &= \{n \in [N,2N] \;:\; n+2 \text{ prime}\}\\
+  A_3 &= \{n \in [N,2N] \;:\; n+6 \text{ prime}\}
+\end{align*}
+Finally, if you are able to count the set $A$ such that $|A| < |A_1| + |A_2| + |A_3|$, then you can use the pigeonhole principle to deduce that there exists at least one number in the interval $[N,2N]$ such that $n, n+2, n+6$ are all prime. This would imply that there are at least two primes in the triplet $(n,n+2,n+6)$, presenting a maximum prime gap of $6$.\\
 \\
-While the naive approach of directly using $P_2$-almost primes can offer some insights, further optimizations can be achieved. For example, replacing the condition that $n, \; n+2, \;n+6 \in P_2$ with a more nuanced condition involving more general forms of almost primes can yield stronger results!
-
-
-
+While the naive approach of directly using $P_2$-almost primes can offer some insights, further optimizations can be achieved. For example, replacing the condition that $n, n+2, n+6 \in P_2$ with a more nuanced condition can yield stronger results. 
+This was done by Goldston, Yildirim, and Pintz (their paper is linked \href{https://terrytao.wordpress.com/2007/06/05/open-question-the-parity-problem-in-sieve-theory/}{here}) who were able to show that prime gaps $\in [N,2N]$ can be as small as $\mathcal{O}\left(\log N\right)$ using a more refined version of the above method. 
 
 
 
 \subsection{Future Research Development}
-Despite the parity problem, the number theory field related to sieves continues to evolve. 
+Despite the parity problem, the field of number theory related to sieves continues to evolve. 
 Researchers are actively exploring both broader applications of these existing sieve methods and entirely new approaches that may finally circumvent the limitations posed by the parity problem. 
 The ongoing work promises not only deeper insights into the distribution of primes but also advancements in the tools of algebraic and analytic number theory itself.
-This exploration into the counting of primes in special forms not only extends our understanding of prime distribution but also continuously pushes the boundaries of mathematical research, offering glimpses into the profound interconnectedness of different mathematical domains.
+Specifically, this exploration into the counting of primes also impacts primes of special forms, which not only extends our understanding of prime distribution(s), but also continuously pushes the boundaries of mathematical research - offering glimpses into the profound interconnectedness of different mathematical domains.
 
 
 

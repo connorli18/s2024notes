@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  25 APR 2024 01:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  25 APR 2024 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/connorli/Documents/GitHub/s2024notes/math seminar/final project/final-project.tex"
-(/Users/connorli/Documents/GitHub/s2024notes/math seminar/final project/final-project.tex
+**"/Users/connorli/Documents/GitHub/s2024notes/IoT research/final-presentation.tex"
+(/Users/connorli/Documents/GitHub/s2024notes/IoT research/final-presentation.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
@@ -1161,7 +1161,29 @@ Package: ocgbase 2022/08/04 v0.22 support package for ocgx2.sty
 \@anim@lineno=\count349
 \@anim@curfield=\count350
 \@anim@@resizeflags=\count351
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count352
+\lst@gtempboxa=\box122
+\lst@token=\toks44
+\lst@length=\count353
+\lst@currlwidth=\dimen303
+\lst@column=\count354
+\lst@pos=\count355
+\lst@lostspace=\dimen304
+\lst@width=\dimen305
+\lst@newlines=\count356
+\lst@lineno=\count357
+\lst@maxwidth=\dimen306
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count358
+\lst@skipnumbers=\count359
+\lst@framebox=\box123
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip133
 \f@nch@O@elh=\skip134
@@ -1172,53 +1194,55 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip139
 \f@nch@O@olf=\skip140
 \f@nch@O@orf=\skip141
-) (./final-project.aux)
-\openout1 = `final-project.aux'.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (./final-presentation.aux)
+\openout1 = `final-presentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count352
-\scratchdimen=\dimen303
-\scratchbox=\box122
-\nofMPsegments=\count353
-\nofMParguments=\count354
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen304
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count360
+\scratchdimen=\dimen307
+\scratchbox=\box124
+\nofMPsegments=\count361
+\nofMParguments=\count362
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count363
+\MPscratchDim=\dimen308
+\MPnumerator=\count364
+\makeMPintoPDFobject=\count365
+\everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 47.
- (./final-project.out) (./final-project.out)
+Package hyperref Info: Link coloring OFF on input line 59.
+ (./final-presentation.out) (./final-presentation.out)
 \@outlinefile=\write4
-\openout4 = `final-project.out'.
+\openout4 = `final-presentation.out'.
 
-LaTeX Info: Command `\dddot' is already robust on input line 47.
-LaTeX Info: Command `\ddddot' is already robust on input line 47.
+LaTeX Info: Command `\dddot' is already robust on input line 59.
+LaTeX Info: Command `\ddddot' is already robust on input line 59.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1254,120 +1278,33 @@ LaTeX Info: Command `\ddddot' is already robust on input line 47.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+\c@lstlisting=\count366
+LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./final-project.toc)
-\tf@toc=\write5
-\openout5 = `final-project.toc'.
+) [1
 
- [1
-
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--102
-
- []
-
-[2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 111--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--130
-
- []
-
-[3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 140.
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--162
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 194--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--205
-
- []
-
-[5{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 233--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--250
-
- []
-
-[6] [7] (./final-project.aux)
-Package rerunfilecheck Info: File `final-project.out' has not changed.
-(rerunfilecheck)             Checksum: 0B061227B16AC7E4F87FE5B585D26B1E;2832.
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./final-presentation.aux)
+Package rerunfilecheck Info: File `final-presentation.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31491 strings out of 476025
- 596615 string characters out of 5790017
- 1870388 words of memory out of 5000000
- 51304 multiletter control sequences out of 15000+600000
- 536681 words of font info for 114 fonts, out of 8000000 for 9000
+ 33217 strings out of 476025
+ 619470 string characters out of 5790017
+ 2148388 words of memory out of 5000000
+ 53012 multiletter control sequences out of 15000+600000
+ 525898 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,128p,7216b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on final-project.pdf (7 pages, 244498 bytes).
+ 84i,11n,128p,7207b,2010s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on final-presentation.pdf (2 pages, 75699 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
- 28 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
