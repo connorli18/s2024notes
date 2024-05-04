@@ -154,5 +154,5 @@ We have a presentation $F[t]^\ell \rightarrow^{\tilde{A}} F[t]^\ell \rightarrow 
 
 Assume $F = \mathbb{C} \implies $ any irreducible polynomial is $p_i = t - \lambda_i$. Any f.d. $F[t]$-module is $C_{p_1^{k_1}}  \oplus \cdots \oplus C_{p_\ell^{k_\ell}} $ . 
 $$
-T = [\text{matrix above}] \quad \quad \text{where each block corresponds to }C_{p_i^{k_i}} 
+T = [\text{matrix above}] \quad \quad \text{where each block corresponds to }C_{p_i^{k_i}}
 $$
